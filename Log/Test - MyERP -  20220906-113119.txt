@@ -1,0 +1,21 @@
+2022-09-06 11:33:28.928 +07:00 [INF] - P - Data Master - COA - Insert - PASS
+2022-09-06 11:33:32.026 +07:00 [INF] - P - Data Master - COA - Read - PASS
+2022-09-06 11:33:36.082 +07:00 [INF] - P - Data Master - COA - Update - PASS
+2022-09-06 11:33:37.974 +07:00 [INF] - P - Data Master - COA - Delete - PASS
+2022-09-06 11:33:45.826 +07:00 [INF] - P - Data Master - Area - Insert - PASS
+2022-09-06 11:33:47.089 +07:00 [INF] - P - Area - Read - PASS
+2022-09-06 11:33:47.570 +07:00 [INF] - P - Area - Update - PASS
+2022-09-06 11:33:48.763 +07:00 [INF] - P - Area - Delete - PASS
+2022-09-06 11:33:59.480 +07:00 [INF] - P - Bank - Insert - PASS
+2022-09-06 11:34:00.691 +07:00 [INF] - P - Bank - Read - PASS
+2022-09-06 11:34:02.164 +07:00 [INF] - P - Bank - Update - PASS
+2022-09-06 11:34:03.412 +07:00 [INF] - P - Bank - Delete - PASS
+2022-09-06 11:34:46.048 +07:00 [INF] - P - Item - Insert - PASS
+2022-09-06 11:35:17.502 +07:00 [INF] - P - Item - Read - FAILED
+2022-09-06 11:35:17.502 +07:00 [ERR] 1 waiting for XPath '//div[@class='slick-cell l0 r0']/a' failed: timeout 30000 ms exceeded
+2022-09-06 11:35:47.762 +07:00 [INF] - P - Item - Update - FAILED
+2022-09-06 11:35:47.762 +07:00 [ERR] 0 waiting for XPath '//input[@Name='Bnama']' failed: timeout 30000 ms exceeded
+2022-09-06 11:36:20.893 +07:00 [INF] - P - Item - Delete - FAILED
+2022-09-06 11:36:20.893 +07:00 [ERR] 4 waiting for XPath '//i[contains(@class, 'fa-trash')]' failed: timeout 30000 ms exceeded
+2022-09-06 11:36:54.971 +07:00 [INF] - N - Other Cost - Insert - Code Blank - FAILED
+2022-09-06 11:36:54.971 +07:00 [ERR] 3 waiting for XPath '//input[@Name='Bnama']' failed: timeout 30000 ms exceeded

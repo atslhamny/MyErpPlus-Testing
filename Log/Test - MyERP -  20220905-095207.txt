@@ -1,0 +1,13 @@
+2022-09-05 09:53:03.853 +07:00 [INF] - P - Auto Login - PASS
+2022-09-05 09:53:33.548 +07:00 [INF] - P - Data Master - COA - Insert - PASS
+2022-09-05 09:53:35.503 +07:00 [INF] - P - Data Master - COA - Read - PASS
+2022-09-05 09:53:37.607 +07:00 [INF] - P - Data Master - COA - Update - PASS
+2022-09-05 09:53:38.841 +07:00 [INF] - P - Data Master - COA - Delete - PASS
+2022-09-05 09:53:44.015 +07:00 [INF] - P - Data Master - Area - Insert - PASS
+2022-09-05 09:53:45.353 +07:00 [INF] - P - Area - Read - PASS
+2022-09-05 09:53:46.065 +07:00 [INF] - P - Area - Update - PASS
+2022-09-05 09:53:47.402 +07:00 [INF] - P - Area - Delete - PASS
+2022-09-05 09:54:00.650 +07:00 [INF] - P - Bank - Insert - PASS
+2022-09-05 09:54:01.818 +07:00 [INF] - P - Bank - Read - PASS
+2022-09-05 09:54:04.310 +07:00 [INF] - P - Bank - Update - PASS
+2022-09-05 09:54:05.512 +07:00 [INF] - P - Bank - Delete - PASS

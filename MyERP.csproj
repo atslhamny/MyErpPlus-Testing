@@ -1,0 +1,307 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{447B1ACF-766F-4072-BA82-1730310C6F6E}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Tester</RootNamespace>
+    <AssemblyName>MyERP</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <NoWarn>CS0169</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Bcl.AsyncInterfaces, Version=1.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Bcl.AsyncInterfaces.1.1.0\lib\net461\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.DependencyInjection.Abstractions, Version=2.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.DependencyInjection.Abstractions.2.0.0\lib\netstandard2.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Logging, Version=2.0.2.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.Logging.2.0.2\lib\netstandard2.0\Microsoft.Extensions.Logging.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Logging.Abstractions, Version=2.0.2.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.Logging.Abstractions.2.0.2\lib\netstandard2.0\Microsoft.Extensions.Logging.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Options, Version=2.0.2.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.Options.2.0.2\lib\netstandard2.0\Microsoft.Extensions.Options.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Primitives, Version=2.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.Primitives.2.0.0\lib\netstandard2.0\Microsoft.Extensions.Primitives.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.WebView2.Core, Version=1.0.1293.44, Culture=neutral, PublicKeyToken=2a8ab48044d2601e, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Web.WebView2.1.0.1293.44\lib\net45\Microsoft.Web.WebView2.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.WebView2.DevToolsProtocolExtension, Version=1.0.824.0, Culture=neutral, PublicKeyToken=2a8ab48044d2601e, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Web.WebView2.DevToolsProtocolExtension.1.0.824\lib\net462\Microsoft.Web.WebView2.DevToolsProtocolExtension.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.WebView2.WinForms, Version=1.0.1293.44, Culture=neutral, PublicKeyToken=2a8ab48044d2601e, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Web.WebView2.1.0.1293.44\lib\net45\Microsoft.Web.WebView2.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.WebView2.Wpf, Version=1.0.1293.44, Culture=neutral, PublicKeyToken=2a8ab48044d2601e, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Web.WebView2.1.0.1293.44\lib\net45\Microsoft.Web.WebView2.Wpf.dll</HintPath>
+    </Reference>
+    <Reference Include="Serilog, Version=2.0.0.0, Culture=neutral, PublicKeyToken=24c2f752a8e58a10, processorArchitecture=MSIL">
+      <HintPath>..\packages\Serilog.2.11.0\lib\net46\Serilog.dll</HintPath>
+    </Reference>
+    <Reference Include="Serilog.Sinks.File, Version=5.0.0.0, Culture=neutral, PublicKeyToken=24c2f752a8e58a10, processorArchitecture=MSIL">
+      <HintPath>..\packages\Serilog.Sinks.File.5.0.0\lib\net45\Serilog.Sinks.File.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Buffers.4.5.1\lib\net461\System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Core" />
+    <Reference Include="System.Memory, Version=4.0.1.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Memory.4.5.4\lib\net461\System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors, Version=4.1.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Numerics.Vectors.4.5.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=4.0.6.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.4.7.1\lib\net461\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Text.Encodings.Web, Version=4.0.5.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Text.Encodings.Web.4.7.1\lib\net461\System.Text.Encodings.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Text.Json, Version=4.0.1.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Text.Json.4.7.2\lib\net461\System.Text.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Threading.Tasks.Extensions, Version=4.2.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Threading.Tasks.Extensions.4.5.4\lib\net461\System.Threading.Tasks.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ValueTuple, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.ValueTuple.4.5.0\lib\net47\System.ValueTuple.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WebView2.DevTools.Dom, Version=3.0.0.0, Culture=neutral, PublicKeyToken=3cbe2b7917902aa7, processorArchitecture=MSIL">
+      <HintPath>..\packages\WebView2.DevTools.Dom.3.0.0\lib\net462\WebView2.DevTools.Dom.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="01TestMasterData\ItemFitur.cs" />
+    <Compile Include="02TestFinanceAccounting\BankPaymentFitur.cs" />
+    <Compile Include="02TestFinanceAccounting\BankReceipt.cs" />
+    <Compile Include="02TestFinanceAccounting\BeginningBalance.cs" />
+    <Compile Include="02TestFinanceAccounting\BeginningBalanceFitur.cs" />
+    <Compile Include="02TestFinanceAccounting\CashDisbursements.cs" />
+    <Compile Include="02TestFinanceAccounting\BankReceiptFitur.cs" />
+    <Compile Include="02TestFinanceAccounting\CashReceipt.cs" />
+    <Compile Include="02TestFinanceAccounting\CashDisbursementsFitur.cs" />
+    <Compile Include="02TestFinanceAccounting\CashReceiptFitur.cs" />
+    <Compile Include="02TestFinanceAccounting\GeneralJournalFitur.cs" />
+    <Compile Include="02TestFinanceAccounting\ReceiveGiroCancelFitur.cs" />
+    <Compile Include="02TestFinanceAccounting\ReceiveGiroFitur.cs" />
+    <Compile Include="02TestFinanceAccounting\SpendGiroCancelFitur.cs" />
+    <Compile Include="02TestFinanceAccounting\SpendGiroFitur.cs" />
+    <Compile Include="03TestWarehouseInventory\StockAdjustmentFitur.cs" />
+    <Compile Include="03TestWarehouseInventory\StockOpnameFitur.cs" />
+    <Compile Include="04TestPurchasing\AdvancePurchaseFitur.cs" />
+    <Compile Include="04TestPurchasing\GoodsReceiptNoteFitur.cs" />
+    <Compile Include="04TestPurchasing\PurchaseInvoiceFitur.cs" />
+    <Compile Include="04TestPurchasing\PurchaseOrderFitur.cs" />
+    <Compile Include="04TestPurchasing\PurchaseRequestFitur.cs" />
+    <Compile Include="05TestSales\DeliveryOrderFitur.cs" />
+    <Compile Include="05TestSales\DeliveryResultFitur.cs" />
+    <Compile Include="05TestSales\PackingListFitur.cs" />
+    <Compile Include="05TestSales\SalesInvoiceFitur.cs" />
+    <Compile Include="05TestSales\SalesReturFitur.cs" />
+    <Compile Include="06TestProduction\MaterialOrderFitur.cs" />
+    <Compile Include="06TestProduction\ProductionFormulaFitur.cs" />
+    <Compile Include="06TestProduction\WorkOrderFitur.cs" />
+    <Compile Include="07TestFixAsset\AssetCategoryFitur.cs" />
+    <Compile Include="07TestFixAsset\AssetCategoryTaxFitur.cs" />
+    <Compile Include="07TestFixAsset\AssetFitur.cs" />
+    <Compile Include="07TestFixAsset\DepreciationAssetFitur.cs" />
+    <Compile Include="Helper\StringHelper.cs" />
+    <Compile Include="Models\Models.cs" />
+    <Compile Include="02TestFinanceAccounting\BankPayment.cs" />
+    <Compile Include="02TestFinanceAccounting\GeneralJournal.cs" />
+    <Compile Include="02TestFinanceAccounting\ReceiveGiro.cs" />
+    <Compile Include="02TestFinanceAccounting\ReceiveGiroCancel.cs" />
+    <Compile Include="02TestFinanceAccounting\SpendGiro.cs" />
+    <Compile Include="02TestFinanceAccounting\SpendGiroCancel.cs" />
+    <Compile Include="07TestFixAsset\Asset.cs" />
+    <Compile Include="07TestFixAsset\AssetCategory.cs" />
+    <Compile Include="07TestFixAsset\AssetCategoryTax.cs" />
+    <Compile Include="07TestFixAsset\DepreciationAsset.cs" />
+    <Compile Include="01TestMasterData\AktivitasProduksiCRUD.cs" />
+    <Compile Include="Helper\App.cs" />
+    <Compile Include="01TestMasterData\AreaCRUD.cs" />
+    <Compile Include="01TestMasterData\AreaFitur.cs" />
+    <Compile Include="01TestMasterData\BankCRUD.cs" />
+    <Compile Include="01TestMasterData\BankFitur.cs" />
+    <Compile Include="01TestMasterData\BranchCRUD.cs" />
+    <Compile Include="01TestMasterData\BranchFitur.cs" />
+    <Compile Include="01TestMasterData\CityCRUD.cs" />
+    <Compile Include="01TestMasterData\CityFitur.cs" />
+    <Compile Include="01TestMasterData\ClassCRUD.cs" />
+    <Compile Include="01TestMasterData\ClassFitur.cs" />
+    <Compile Include="01TestMasterData\CoaCRUD.cs" />
+    <Compile Include="01TestMasterData\CoaFitur.cs" />
+    <Compile Include="01TestMasterData\ColourCRUD.cs" />
+    <Compile Include="01TestMasterData\ColourFitur.cs" />
+    <Compile Include="01TestMasterData\ContactCategoryCRUD.cs" />
+    <Compile Include="01TestMasterData\ContactCategoryFitur.cs" />
+    <Compile Include="01TestMasterData\CostCenterCRUD.cs" />
+    <Compile Include="01TestMasterData\CostCenterFitur.cs" />
+    <Compile Include="01TestMasterData\CountryCRUD.cs" />
+    <Compile Include="01TestMasterData\CountryFitur.cs" />
+    <Compile Include="01TestMasterData\CurrencyCRUD.cs" />
+    <Compile Include="01TestMasterData\CurrencyFitur.cs" />
+    <Compile Include="01TestMasterData\CustomerCategoryCRUD.cs" />
+    <Compile Include="01TestMasterData\CustomerCategoryFitur.cs" />
+    <Compile Include="01TestMasterData\DepartmentCRUD.cs" />
+    <Compile Include="01TestMasterData\DepartmentFitur.cs" />
+    <Compile Include="01TestMasterData\DesignCRUD.cs" />
+    <Compile Include="01TestMasterData\DesignFitur.cs" />
+    <Compile Include="01TestMasterData\DivisionCRUD.cs" />
+    <Compile Include="01TestMasterData\DivisionFitur.cs" />
+    <Compile Include="01TestMasterData\ExpeditionCRUD.cs" />
+    <Compile Include="FrmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmMain.Designer.cs">
+      <DependentUpon>FrmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="01TestMasterData\ExpeditionFitur.cs" />
+    <Compile Include="01TestMasterData\GroupCRUD.cs" />
+    <Compile Include="01TestMasterData\ItemCategoryCRUD.cs" />
+    <Compile Include="01TestMasterData\ItemCategoryFitur.cs" />
+    <Compile Include="01TestMasterData\ItemCRUD.cs" />
+    <Compile Include="01TestMasterData\ItemLocationCRUD.cs" />
+    <Compile Include="01TestMasterData\ItemTypeCRUD.cs" />
+    <Compile Include="01TestMasterData\LocationCRUD.cs" />
+    <Compile Include="01TestMasterData\LocationFitur.cs" />
+    <Compile Include="06TestProduction\MaterialOrder.cs" />
+    <Compile Include="06TestProduction\MaterialSlip.cs" />
+    <Compile Include="06TestProduction\ProductionSlip.cs" />
+    <Compile Include="06TestProduction\ProductionFormula.cs" />
+    <Compile Include="06TestProduction\ReturBahanBaku.cs" />
+    <Compile Include="04TestPurchasing\AdvancePurchase.cs" />
+    <Compile Include="04TestPurchasing\ExchangeInvoice.cs" />
+    <Compile Include="04TestPurchasing\GoodsReceiptNote.cs" />
+    <Compile Include="04TestPurchasing\PurchaseInvoice.cs" />
+    <Compile Include="04TestPurchasing\PurchaseOrder.cs" />
+    <Compile Include="04TestPurchasing\PurchaseRequest.cs" />
+    <Compile Include="04TestPurchasing\PurchaseReturn.cs" />
+    <Compile Include="04TestPurchasing\VendorPayment.cs" />
+    <Compile Include="04TestPurchasing\VendorPaymentPlan.cs" />
+    <Compile Include="05TestSales\AdvanceSales.cs" />
+    <Compile Include="05TestSales\DeliveryResult.cs" />
+    <Compile Include="05TestSales\DeliveryOrder.cs" />
+    <Compile Include="05TestSales\PackingList.cs" />
+    <Compile Include="05TestSales\PaymentReceipt.cs" />
+    <Compile Include="05TestSales\ProformaInvoice.cs" />
+    <Compile Include="05TestSales\ReceivePayment.cs" />
+    <Compile Include="05TestSales\SalesARBeginningBalance.cs" />
+    <Compile Include="05TestSales\SalesInvoice.cs" />
+    <Compile Include="05TestSales\SalesOrder.cs" />
+    <Compile Include="05TestSales\SalesQuotation.cs" />
+    <Compile Include="05TestSales\SalesRetur.cs" />
+    <Compile Include="00TestSystem\LoginMyERP.cs" />
+    <Compile Include="01TestMasterData\MaterialCRUD.cs" />
+    <Compile Include="01TestMasterData\MerkCRUD.cs" />
+    <Compile Include="01TestMasterData\ModelCRUD.cs" />
+    <Compile Include="01TestMasterData\OemCRUD.cs" />
+    <Compile Include="01TestMasterData\OtherCostCRUD.cs" />
+    <Compile Include="01TestMasterData\OtherCRUD.cs" />
+    <Compile Include="01TestMasterData\PriceCategoryCRUD.cs" />
+    <Compile Include="01TestMasterData\ProductClassCRUD.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="01TestMasterData\ProjectCRUD.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="01TestMasterData\ProvinceCRUD.cs" />
+    <Compile Include="Helper\RandomGenerator.cs" />
+    <Compile Include="01TestMasterData\SalesmanCategoryCRUD.cs" />
+    <Compile Include="01TestMasterData\SizeCRUD.cs" />
+    <Compile Include="01TestMasterData\StockAdjustmentCRUD.cs" />
+    <Compile Include="01TestMasterData\SubClassCRUD.cs" />
+    <Compile Include="01TestMasterData\SubDepartmentCRUD.cs" />
+    <Compile Include="01TestMasterData\SubDivisionCRUD.cs" />
+    <Compile Include="01TestMasterData\SupplierCategoryCRUD.cs" />
+    <Compile Include="01TestMasterData\TaxCRUD.cs" />
+    <Compile Include="01TestMasterData\TermsCRUD.cs" />
+    <Compile Include="01TestMasterData\TransactionNoteCRUD.cs" />
+    <Compile Include="01TestMasterData\TransactionNoteDetailCRUD.cs" />
+    <Compile Include="01TestMasterData\UnitCRUD.cs" />
+    <Compile Include="01TestMasterData\VendorCRUD.cs" />
+    <Compile Include="01TestMasterData\WarehouseCRUD.cs" />
+    <Compile Include="03TestWarehouseInventory\ItemBeginningBalance.cs" />
+    <Compile Include="03TestWarehouseInventory\MaterialRequisition.cs" />
+    <Compile Include="03TestWarehouseInventory\PriceListAdjustment.cs" />
+    <Compile Include="03TestWarehouseInventory\StockAdjustment.cs" />
+    <Compile Include="03TestWarehouseInventory\StockOpname.cs" />
+    <Compile Include="03TestWarehouseInventory\TransferStock.cs" />
+    <EmbeddedResource Include="FrmMain.resx">
+      <DependentUpon>FrmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="packages.config" />
+    <None Include="Properties\DataSources\MyERP.logsitems.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="..\packages\Microsoft.Web.WebView2.1.0.1293.44\build\Microsoft.Web.WebView2.targets" Condition="Exists('..\packages\Microsoft.Web.WebView2.1.0.1293.44\build\Microsoft.Web.WebView2.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.Web.WebView2.1.0.1293.44\build\Microsoft.Web.WebView2.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Web.WebView2.1.0.1293.44\build\Microsoft.Web.WebView2.targets'))" />
+  </Target>
+</Project>

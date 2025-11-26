@@ -1,0 +1,4 @@
+2022-09-06 15:41:24.356 +07:00 [INF] - N - Auto Login - Blank Email - FAILED
+2022-09-06 15:41:24.383 +07:00 [ERR] 3 Value does not fall within the expected range.
+2022-09-06 15:42:02.505 +07:00 [INF] - P - Auto Login - FAILED
+2022-09-06 15:42:02.505 +07:00 [ERR] 5 waiting for XPath '//h1[text()='Home']' failed: timeout 30000 ms exceeded

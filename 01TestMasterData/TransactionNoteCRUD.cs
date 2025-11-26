@@ -1,0 +1,291 @@
+﻿using System;
+using System.Diagnostics;
+using System.Threading.Tasks;
+using WebView2.DevTools.Dom;
+
+namespace Tester
+{
+   public class TransactionNoteCRUD
+   {
+      FrmMain frm = App.FrmMain;
+      WebView2DevToolsContext page = App.page;
+
+      public async Task Start()
+      {
+         int Step = 0;
+         try
+         {
+            Step = 1; // Transaction Note - Insert - All Blank (Negative)
+            if (frm.IsStopped) return;
+            await AllBlank();
+
+            Step = 2; // Transaction Note - Insert - Source Blank (Negative)
+            if (frm.IsStopped) return;
+            await SourceBlank();
+
+            Step = 3; // Transaction Note - Insert - Code Blank (Negative)
+            if (frm.IsStopped) return;
+            await CodeBlank();
+
+            Step = 4; // Transaction Note - Insert (Posititve)
+            if (frm.IsStopped) return;
+            await Create();
+
+            Step = 5; // Transaction Note - Read (Posititve)
+            if (frm.IsStopped) return;
+            await Read();
+
+            Step = 6; // Transaction Note - Update (Posititve)
+            if (frm.IsStopped) return;
+            await Update();
+
+            Step = 7; // Transaction Note - Delete (Posititve)
+            if (frm.IsStopped) return;
+            await Delete();
+
+         }
+         catch (Exception ex)
+         {
+            frm.Logs("Info", $"Transaction Note - CRUD step {Step}", $"FAILED -- {ex.Message}");
+         }
+         finally
+         {
+            frm.UpdateStatus("Proses Transaction Note - CRUD Selesai");
+         }
+      }
+
+      public async Task AllBlank()
+      {
+         var Proses = "Transaction Note - Insert - All Blank (Negative)"; frm.UpdateStatus(Proses);
+         Stopwatch jam = new Stopwatch(); jam.Start(); frm.Test++;
+         int Step = 0;
+         try
+         {
+            Step = 1; // Navigasi ke menu
+            var menu = await page.XPathAsync("//a[contains(@href, 'M1Transactionnote?md')]/span");
+            if (menu.Length > 0)
+               await menu[0].EvaluateFunctionAsync<string>("e => e.click()");
+
+            Step = 2; // Klik [New...]
+            await App.ClickBtn("//div[contains(@class, 'add-button')]");
+
+            Step = 3; // Klik Save
+            await App.ClickBtn("//div[contains(@class, 'save-and-close-button')]");
+
+            Step = 4; // Klik Close [X]
+            await App.ClickBtn("//button[@title='Close']");
+
+            Step = 5; // Apa ada label error?
+            var LblError = await page.XPathAsync("//label[@class='error']");
+
+            Step = 6; // Set hasil
+            jam.Stop();
+            frm.Logs("N", Proses, LblError != null ? "PASS" : "FAILED", jam.ElapsedMilliseconds);
+            if (LblError != null) { frm.PASS++; } else { frm.FAILED++; };
+         }
+         catch (Exception ex)
+         {
+            frm.FAILED++;
+            jam.Stop();
+            frm.Logs("N", $"{Proses} - step {Step} : {ex.Message}", "FAILED", jam.ElapsedMilliseconds);
+         }
+      }
+
+      public async Task SourceBlank()
+      {
+         var Proses = "Transaction Note - Insert - Source Blank (Negative)"; frm.UpdateStatus(Proses);
+         Stopwatch jam = new Stopwatch(); jam.Start(); frm.Test++;
+         int Step = 0;
+         try
+         {
+            Step = 1; // Klik [New...] 
+            await App.ClickBtn("//div[contains(@class, 'add-button')]");
+
+            Step = 2; // Input [[Kode]]
+            await App.InputData("//input[@name='Tnkode']", "Nike");
+
+            Step = 3; // Input [Catatan]
+            await App.InputData("//textarea[@name='Tncatatan']", "Automation");
+
+            Step = 4; // Klik Save
+            await App.ClickBtn("//div[contains(@class, 'save-and-close-button')]");
+
+            Step = 5; // Klik Close [X]
+            await App.ClickBtn("//button[@title='Close']");
+
+            Step = 6; // Apa Ada Label Error?
+            var LblError = await page.XPathAsync("//label[@class='error']");
+
+            Step = 7; // Set hasil
+            jam.Stop();
+            frm.Logs("N", Proses, LblError != null ? "PASS" : "FAILED", jam.ElapsedMilliseconds);
+            if (LblError != null) { frm.PASS++; } else { frm.FAILED++; };
+         }
+         catch (Exception ex)
+         {
+            frm.FAILED++;
+            jam.Stop();
+            frm.Logs("N", $"{Proses} - step {Step} : {ex.Message}", "FAILED", jam.ElapsedMilliseconds);
+         }
+      }
+
+      public async Task CodeBlank()
+      {
+         var Proses = "Transaction Note - Insert - Code Blank (Negative)"; frm.UpdateStatus(Proses);
+         Stopwatch jam = new Stopwatch(); jam.Start(); frm.Test++;
+         int Step = 0;
+         try
+         {
+            Step = 1; // Klik [New...] 
+            await App.ClickBtn("//div[contains(@class, 'add-button')]");
+
+            Step = 2; // Input Source
+            await App.InputData("//input[@name='Tnsumber']", "12761");
+
+            Step = 3; // Input [Catatan]
+            await App.InputData("//textarea[@name='Tncatatan']", "Automation");
+
+            Step = 4; // Klik Save
+            await App.ClickBtn("//div[contains(@class, 'save-and-close-button')]");
+
+            Step = 5; // Klik Close [X]
+            await App.ClickBtn("//button[@title='Close']");
+
+            Step = 6; // Apa ada label error?
+            var LblError = await page.XPathAsync("//label[@class='error']");
+
+            Step = 7; // Set hasil
+            jam.Stop();
+            frm.Logs("N", Proses, LblError != null ? "PASS" : "FAILED", jam.ElapsedMilliseconds);
+            if (LblError != null) { frm.PASS++; } else { frm.FAILED++; };
+         }
+         catch (Exception ex)
+         {
+            frm.FAILED++;
+            jam.Stop();
+            frm.Logs("N", $"{Proses} - step {Step} : {ex.Message}", "FAILED", jam.ElapsedMilliseconds);
+         }
+      }
+
+      public async Task Create()
+      {
+         var Proses = "Transaction Note - Insert (Posititve)"; frm.UpdateStatus(Proses);
+         Stopwatch jam = new Stopwatch(); jam.Start(); frm.Test++;
+         int Step = 0;
+         try
+         {
+            Step = 1; // Klik [New...] 
+            await App.ClickBtn("//div[contains(@class, 'add-button')]");
+
+            Step = 2; // Input Source
+            var rand = new RandomGenerator().RandomString(5);
+            await App.InputData("//input[@name='Tnsumber']", $"{rand}");
+
+            Step = 3; // Input [Kode]
+            var random = new RandomGenerator().RandomString(5);
+            await App.InputData("//input[@name='Tnkode']", $"{random}");
+
+            Step = 4; // Input [Catatan]
+            await App.InputData("//textarea[@name='Tncatatan']", "Automation");
+
+            Step = 5; // Klik Save
+            await App.ClickBtn("//div[contains(@class, 'save-and-close-button')]");
+
+            Step = 6; // Apa ada label error?
+            var LblError = await page.XPathAsync("//label[@class='error']");
+
+            Step = 7; // Set hasil
+            jam.Stop();
+            frm.Logs("P", Proses, LblError.Length > 0 ? "FAILED" : "PASS", jam.ElapsedMilliseconds);
+            if (LblError.Length > 0) { frm.FAILED++; } else { frm.PASS++; };
+
+         }
+         catch (Exception ex)
+         {
+            frm.FAILED++;
+            jam.Stop();
+            frm.Logs("P", $"{Proses} - step {Step} : {ex.Message}", "FAILED", jam.ElapsedMilliseconds);
+         }
+      }
+
+      public async Task Read()
+      {
+         var Proses = "Transaction Note - Read (Posititve)"; frm.UpdateStatus(Proses);
+         Stopwatch jam = new Stopwatch(); jam.Start(); frm.Test++;
+         int Step = 0;
+         try
+         {
+            Step = 1; // Klik Value 
+            await App.Click("//div[@class='slick-cell l0 r0']/a");
+
+            frm.PASS++;
+            jam.Stop();
+            frm.Logs("P", Proses, "PASS", jam.ElapsedMilliseconds);
+         }
+         catch (Exception ex)
+         {
+            frm.FAILED++;
+            jam.Stop();
+            frm.Logs("P", $"{Proses} - step {Step} : {ex.Message}", "FAILED", jam.ElapsedMilliseconds);
+         }
+      }
+
+      public async Task Update()
+      {
+         var Proses = "Transaction Note - Update (Posititve)"; frm.UpdateStatus(Proses);
+         Stopwatch jam = new Stopwatch(); jam.Start(); frm.Test++;
+         int Step = 0;
+         try
+         {
+            Step = 1; // Input Nama
+            await App.InputData("//textarea[@name='Tncatatan']", "Update");
+
+            Step = 2; // Klik Save
+            await App.ClickBtn("//div[contains(@class, 'save-and-[Close]-button')]");
+
+            frm.PASS++;
+            jam.Stop();
+            frm.Logs("P", Proses, "PASS", jam.ElapsedMilliseconds);
+         }
+         catch (Exception ex)
+         {
+            frm.FAILED++;
+            jam.Stop();
+            frm.Logs("P", $"{Proses} - step {Step} : {ex.Message}", "FAILED", jam.ElapsedMilliseconds);
+         }
+      }
+
+      public async Task Delete()
+      {
+         var Proses = "Transaction Note - Delete (Posititve)"; frm.UpdateStatus(Proses);
+         Stopwatch jam = new Stopwatch(); jam.Start(); frm.Test++;
+         int Step = 0;
+         try
+         {
+            Step = 1; // Klik Value
+            await App.Click("//div[contains(@class, 'top grid-canvas-left')]/div[contains(@class, 'slick-row')]");
+
+            Step = 2; // Klik Delete
+            await App.ClickBtn("//i[contains(@class, 'trash')]/..");
+
+            Step = 3; // Klik Ya Pop Up
+            await App.ClickBtn("//button[text()='Yes']"); ;
+
+            Step = 4;
+            var LblError = await page.XPathAsync("//div[contains(text(), 'Data tidak bisa dihapus kerena ada transaksi terkait.')]");
+
+            Step = 5; // Set hasil
+            await App.ClickBtn("//button[text()='OK']");
+            jam.Stop();
+            frm.Logs("P", Proses, LblError.Length > 0 ? "FAILED" : "PASS", jam.ElapsedMilliseconds);
+            if (LblError.Length > 0) { frm.FAILED++; } else { frm.PASS++; };
+         }
+         catch (Exception ex)
+         {
+            frm.FAILED++;
+            jam.Stop();
+            frm.Logs("P", $"{Proses} - step {Step} : {ex.Message}", "FAILED", jam.ElapsedMilliseconds);
+         }
+      }
+   }
+}

@@ -1,0 +1,2 @@
+2022-09-06 14:39:45.172 +07:00 [INF] - N - Data Master - COA - Insert - All Blank - FAILED
+2022-09-06 14:39:45.222 +07:00 [ERR] 2 waiting for XPath '//div[contains(@class, 'add-button')]' failed: timeout 30000 ms exceeded

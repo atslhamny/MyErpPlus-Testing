@@ -1,0 +1,80 @@
+2022-09-02 16:09:57.350 +07:00 [INF] - P - Auto Login - PASS
+2022-09-02 16:11:41.437 +07:00 [INF] - P - Data Master - COA - Insert - PASS
+2022-09-02 16:11:42.629 +07:00 [INF] - P - Data Master - COA - Read - PASS
+2022-09-02 16:12:13.626 +07:00 [INF] - P - Data Master - COA - Update - FAILED
+2022-09-02 16:12:13.626 +07:00 [ERR] 1 waiting for XPath '//input[@name='Cnama']' failed: timeout 30000 ms exceeded
+2022-09-02 16:12:15.311 +07:00 [INF] - P - Data Master - COA - Delete - PASS
+2022-09-02 16:12:23.417 +07:00 [INF] - P - Data Master - Area - Insert - PASS
+2022-09-02 16:12:24.571 +07:00 [INF] - P - Area - Read - PASS
+2022-09-02 16:12:25.342 +07:00 [INF] - P - Area - Update - PASS
+2022-09-02 16:12:26.607 +07:00 [INF] - P - Area - Delete - PASS
+2022-09-02 16:12:39.137 +07:00 [INF] - P - Bank - Insert - PASS
+2022-09-02 16:12:40.349 +07:00 [INF] - P - Bank - Read - PASS
+2022-09-02 16:12:42.173 +07:00 [INF] - P - Bank - Update - PASS
+2022-09-02 16:12:43.458 +07:00 [INF] - P - Bank - Delete - PASS
+2022-09-02 16:13:48.402 +07:00 [INF] - P - Item - Insert - PASS
+2022-09-02 16:14:19.665 +07:00 [INF] - P - Item - Read - FAILED
+2022-09-02 16:14:19.665 +07:00 [ERR] 1 waiting for XPath '//div[@class='slick-cell l0 r0']/a' failed: timeout 30000 ms exceeded
+2022-09-02 16:14:22.589 +07:00 [INF] - P - Item - Update - PASS
+2022-09-02 16:14:53.943 +07:00 [INF] - P - Item - Delete - FAILED
+2022-09-02 16:14:53.944 +07:00 [ERR] 3 waiting for XPath '//div[@class='slick-row']' failed: timeout 30000 ms exceeded
+2022-09-02 16:15:30.287 +07:00 [INF] - N - Other Cost - Insert - Code Blank - FAILED
+2022-09-02 16:15:30.287 +07:00 [ERR] 3 waiting for XPath '//input[@Name='Bnama']' failed: timeout 30000 ms exceeded
+2022-09-02 16:16:01.463 +07:00 [INF] - N - Other Cost - Insert - Name Blank - FAILED
+2022-09-02 16:16:01.463 +07:00 [ERR] 2 waiting for XPath '//input[@Name='Bkode']' failed: timeout 30000 ms exceeded
+2022-09-02 16:16:12.868 +07:00 [INF] - P - Other Cost - Insert - FAILED
+2022-09-02 16:16:13.924 +07:00 [INF] - P - Other Cost - Read - PASS
+2022-09-02 16:16:15.258 +07:00 [INF] - P - Other Cost - Update - PASS
+2022-09-02 16:16:46.853 +07:00 [INF] - P - Other Cost - Delete - FAILED
+2022-09-02 16:16:46.853 +07:00 [ERR] 5 waiting for XPath '//button[text()='Yes']' failed: timeout 30000 ms exceeded
+2022-09-02 16:17:00.635 +07:00 [INF] - P - Branch - Insert - PASS
+2022-09-02 16:17:01.844 +07:00 [INF] - P - Branch - Read - PASS
+2022-09-02 16:17:03.571 +07:00 [INF] - P - Branch - Update - PASS
+2022-09-02 16:17:34.800 +07:00 [INF] - P - Branch - Delete - FAILED
+2022-09-02 16:17:34.800 +07:00 [ERR] 3 waiting for XPath '//div[@class='slick-row']' failed: timeout 30000 ms exceeded
+2022-09-02 16:17:42.768 +07:00 [INF] - P - Transaction Note - Insert - PASS
+2022-09-02 16:17:44.005 +07:00 [INF] - P - Transaction Note - Read - PASS
+2022-09-02 16:17:47.128 +07:00 [INF] - P - Transaction Note - Update - PASS
+2022-09-02 16:17:50.859 +07:00 [INF] - P - Transaction Note - Delete - PASS
+2022-09-02 16:18:00.432 +07:00 [INF] - P - Transaction Note Detail  - Insert - FAILED
+2022-09-02 16:18:02.047 +07:00 [INF] - P - Transaction Note Detail  - Read - PASS
+2022-09-02 16:18:03.761 +07:00 [INF] - P - Transaction Note Detail  - Update - PASS
+2022-09-02 16:18:35.465 +07:00 [INF] - P - Transaction Note Detail  - Delete - FAILED
+2022-09-02 16:18:35.465 +07:00 [ERR] 5 waiting for XPath '//button[text()='Yes']' failed: timeout 30000 ms exceeded
+2022-09-02 16:18:51.149 +07:00 [INF] - P - Cost Center - Insert - FAILED
+2022-09-02 16:18:52.286 +07:00 [INF] - P - Cost Center - Read - PASS
+2022-09-02 16:19:22.469 +07:00 [INF] - P - Cost Center - Update - FAILED
+2022-09-02 16:19:22.469 +07:00 [ERR] 0 waiting for XPath '//textarea[@name='Ccnama']' failed: timeout 30000 ms exceeded
+2022-09-02 16:19:24.116 +07:00 [INF] - P - Cost Center - Delete - PASS
+2022-09-02 16:19:32.110 +07:00 [INF] - P - Division - Insert - PASS
+2022-09-02 16:19:33.326 +07:00 [INF] - P - Division - Read - PASS
+2022-09-02 16:20:03.546 +07:00 [INF] - P - Division - Update - FAILED
+2022-09-02 16:20:03.546 +07:00 [ERR] 0 waiting for XPath '//textarea[@name='Dnama']' failed: timeout 30000 ms exceeded
+2022-09-02 16:20:05.291 +07:00 [INF] - P - Division - Delete - PASS
+2022-09-02 16:20:41.448 +07:00 [INF] - N - Expedition - Insert - Blank Code - FAILED
+2022-09-02 16:20:41.448 +07:00 [ERR] 9 waiting for XPath '//textExpedition[@name='Ecatatan']' failed: timeout 30000 ms exceeded
+2022-09-02 16:21:15.203 +07:00 [INF] - N - Expedition - Insert - Blank Name - FAILED
+2022-09-02 16:21:15.203 +07:00 [ERR] 9 waiting for XPath '//textExpedition[@name='Ecatatan']' failed: timeout 30000 ms exceeded
+2022-09-02 16:21:49.075 +07:00 [INF] - P - Expedition- Insert - FAILED
+2022-09-02 16:21:49.075 +07:00 [ERR] 9 waiting for XPath '//textExpedition[@name='Ecatatan']' failed: timeout 30000 ms exceeded
+2022-09-02 16:21:50.600 +07:00 [INF] - P - Expedition - Read - PASS
+2022-09-02 16:21:52.127 +07:00 [INF] - P - Expedition - Update - PASS
+2022-09-02 16:21:53.452 +07:00 [INF] - P - Expedition - Delete - PASS
+2022-09-02 16:22:36.398 +07:00 [INF] - N - Warehouse - Insert - Name Blank - FAILED
+2022-09-02 16:22:36.399 +07:00 [ERR] 2 waiting for XPath '//input[@Name='Wkode']' failed: timeout 30000 ms exceeded
+2022-09-02 16:22:49.748 +07:00 [INF] - P - Warehouse - Insert - PASS
+2022-09-02 16:22:50.806 +07:00 [INF] - P - Warehouse - Read - PASS
+2022-09-02 16:22:52.193 +07:00 [INF] - P - Warehouse - Update - PASS
+2022-09-02 16:23:23.947 +07:00 [INF] - P - Warehouse - Delete - FAILED
+2022-09-02 16:23:23.947 +07:00 [ERR] 5 waiting for XPath '//button[text()='Yes']' failed: timeout 30000 ms exceeded
+2022-09-02 16:23:37.038 +07:00 [INF] - P - Item Category - Insert - PASS
+2022-09-02 16:23:38.117 +07:00 [INF] - P - Item Category - Read - PASS
+2022-09-02 16:23:38.738 +07:00 [INF] - P - Item Category - Update - PASS
+2022-09-02 16:24:10.524 +07:00 [INF] - P - Item Category - Delete - FAILED
+2022-09-02 16:24:10.525 +07:00 [ERR] 5 waiting for XPath '//button[text()='Yes']' failed: timeout 30000 ms exceeded
+2022-09-02 16:24:47.260 +07:00 [INF] - P - Conntact Category - Insert - PASS
+2022-09-02 16:24:48.407 +07:00 [INF] - P - Conntact Category - Read - PASS
+2022-09-02 16:24:49.990 +07:00 [INF] - P - Conntact Category - Update - PASS
+2022-09-02 16:24:51.274 +07:00 [INF] - P - Conntact Category - Delete - PASS
+2022-09-02 16:25:32.822 +07:00 [INF] - N - Customer Category - Insert - Name Blank - FAILED
+2022-09-02 16:25:32.822 +07:00 [ERR] 2 waiting for XPath '//input[@Name='Cckode']' failed: timeout 30000 ms exceeded
